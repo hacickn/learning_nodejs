@@ -20,6 +20,9 @@ In this course, following subjects are covered;
 ```
 I completed all these sub-parts. Currently, I'm devoloping myself in this field and working on a project which is implemented by using node.js, mongoDB.
 
+### Note
+- Html,css, and all dev-data are given in the course.
+
 - [You can reach the course here](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)
 
 
