@@ -20,5 +20,7 @@ In this course, following subjects are covered;
 ```
 I completed all these sub-parts. Currently, I'm devoloping myself in this field and working on a project which is implemented by using node.js, mongoDB.
 
-[You can reach the course here](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)
-[You can reach the Jonas page here](https://codingheroes.io/resources/)
+- [You can reach the course here](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)
+
+
+- [You can reach the Jonas page here](https://codingheroes.io/resources/)
