@@ -1,16 +1,15 @@
 const express = require('express');
-<<<<<<< HEAD
-const authController = require('../controllers/authController');
 const tourController = require('./../controllers/tourController');
-//const reviewController = require('../controllers/reviewController');
+const authController = require('./../controllers/authController');
 const reviewRouter = require('./../routes/reviewRoutes');
 
-=======
->>>>>>> parent of 7f4eda3 (a)
 const router = express.Router();
-const tourController = require('./../controllers/tourController');
 
-<<<<<<< HEAD
+// router.param('id', tourController.checkID);
+
+// POST /tour/234fad4/reviews
+// GET /tour/234fad4/reviews
+
 router.use('/:tourId/reviews', reviewRouter);
 
 router
@@ -29,16 +28,14 @@ router
 router
   .route('/tours-within/:distance/center/:latlng/unit/:unit')
   .get(tourController.getToursWithin);
+// /tours-within?distance=233&center=-40,45&unit=mi
+// /tours-within/233/center/-40,45/unit/mi
 
 router.route('/distances/:latlng/unit/:unit').get(tourController.getDistances);
-=======
-//router.param('id', tourController.checkID);
->>>>>>> parent of 7f4eda3 (a)
 
 router
   .route('/')
   .get(tourController.getAllTours)
-<<<<<<< HEAD
   .post(
     authController.protect,
     authController.restrictTo('admin', 'lead-guide'),
@@ -51,6 +48,8 @@ router
   .patch(
     authController.protect,
     authController.restrictTo('admin', 'lead-guide'),
+    tourController.uploadTourImages,
+    tourController.resizeTourImages,
     tourController.updateTour
   )
   .delete(
@@ -58,13 +57,5 @@ router
     authController.restrictTo('admin', 'lead-guide'),
     tourController.deleteTour
   );
-=======
-  .post(tourController.createTour);
-router
-  .route('/:id')
-  .get(tourController.getTour)
-  .patch(tourController.updateTour)
-  .delete(tourController.deleteTour);
->>>>>>> parent of 7f4eda3 (a)
 
 module.exports = router;
